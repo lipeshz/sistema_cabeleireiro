@@ -1,2 +1,2 @@
 # sistema_cabelereiro
-Sistema de agendamento para cabelereiro.
+Sistema de agendamento para cabeleireiro.

@@ -6,6 +6,7 @@ class Agendamento{
     private $tempo_atendimento;
     private $id_agendante;
     private $preco;
+    private $tipo;
 
 
     function set_id_agendamento($id_agendamento){
@@ -54,6 +55,14 @@ class Agendamento{
 
     function get_preco(){
         return $this->preco;
+    }
+
+    function set_tipo($tipo){
+        $this->tipo = $tipo;
+    }
+
+    function get_tipo(){
+        return $this->tipo;
     }
 }
 ?>

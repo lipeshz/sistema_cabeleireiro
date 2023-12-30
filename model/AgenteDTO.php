@@ -9,6 +9,14 @@ class Agente{
     private $cpf;
     private $unidade;
 
+    function set_id_agente($id_agente){
+        $this->id_agente = $id_agente;
+    }
+
+    function get_id_agente(){
+        return $this->id_agente;
+    }
+
     function set_nome($nome){
         $this->nome = $nome;
     }

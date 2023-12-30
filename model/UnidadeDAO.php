@@ -56,9 +56,25 @@ class UnidadeDAO{
 
     }
 
-    function obter_por_cidade($cidade){
+    function obter_todos_por_cidade($cidade){
         $lista = [];
         $result = $this->con->query("SELECT * FROM unidades WHERE cidade = '" . $cidade . "'");
+
+        while($row = $result->fetch(PDO::FETCH_ASSOC)){
+            $u = new Unidade();
+            $u->set_id_unidade($row['id_unidade']);
+            $u->set_estado($row['estado']);
+            $u->set_cidade($row['cidade']);
+            $u->set_bairro($row['bairro']);
+            $u->set_rua($row['rua']);
+            array_push($lista, $u);
+        }
+        return $lista;
+    }
+
+    function obter_cidade_unica(){
+        $result = $this->con->query("SELECT DISTINCT cidade
+        FROM unidades");
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)){
             $u = new Unidade();

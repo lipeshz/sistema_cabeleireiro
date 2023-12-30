@@ -18,7 +18,7 @@ class GerenciadorDeConexoes{
         $username = 'root';
 		$password = '';
 		$host = 'localhost';
-		$db_name ='cabelos';
+		$db_name ='cabeleireiro';
         $porta= '3306';
 
         $str_con = 'mysql:host=' . $host . ';port='. $porta .';dbname=' . $db_name; 

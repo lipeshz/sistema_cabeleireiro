@@ -6,6 +6,8 @@
     <title>Estilo Único - Início</title>
 </head>
     <body>
-        
+        <?php 
+        require('req_header.php');
+        ?>
     </body>
 </html>

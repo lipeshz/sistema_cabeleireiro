@@ -1,5 +1,5 @@
 {
-    "name":"php/sistema_cabeleireiro",
+    "name":"php/sistema_cabelereiro",
     "autoload":{
         "psr-4":{
             "App\\":"app/"

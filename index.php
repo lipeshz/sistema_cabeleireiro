@@ -3,7 +3,7 @@ require __DIR__.'/vendor/autoload.php';
 use \App\Http\Router;
 use \App\Utils\View;
 
-define('URL', 'http://sistema_cabelereiro');
+define('URL', 'http://localhost/sistema_cabelereiro');
 
 View::init([
     'URL' => URL

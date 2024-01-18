@@ -29,7 +29,7 @@ class Router{
     }
 
     public function delete($route,$params=[]){
-        return $this->addRoute('delete',$route,$params);
+        return $this->addRoute('DELETE',$route,$params);
     }
 
     private function setPrefix(){
@@ -73,7 +73,7 @@ class Router{
         foreach($this->routes as $patternRoute=>$methods){
             if(preg_match($patternRoute,$uri,$matches)){
                 if(isset($methods[$httpMethod])){
-                    unset($mateches[0]);
+                    unset($matches[0]);
                     $keys = $methods[$httpMethod]['variables'];
                     $methods[$httpMethod]['variables'] = array_combine($keys, $matches);
                     $methods[$httpMethod]['variables']['request'] = $this->request;
